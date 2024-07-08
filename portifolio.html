@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portifolio.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        let currentSlide = 0;
+
+        function changeSlide(direction) {
+            const items = document.querySelectorAll('.carousel-item');
+            items[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + items.length) % items.length;
+            items[currentSlide].classList.add('active');
+}
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.carousel-item').classList.add('active');
+});
+    </script>
+    <section id="home" class="section">
+        <h1>Welcome to my portfolio!</h1>
+        <p>Explore my projects and discover how I can contribute to the success of your next venture</p>
+    </section>
+    <div class="side-by-side">
+        <section id="about" class="section">
+            <h2>About me</h2>
+            <p id="normalp" class="cardp">From an early age, I developed a deep connection and fascination with technology. I believe in the vast potential that technology offers and have always been motivated by curiosity to explore its infinite possibilities. After completing high school, I decided to follow my passion and entered the Systems Analysis and Development faculty,
+                where I am currently studying.</p>
+                <p id="normalp" class="cardp">My goal is to constantly improve myself in the area, seeking not only the knowledge provided by the course, but also exploring external sources. I am motivated by new challenges and I am always excited about the opportunities that each project brings.
+                I believe that the combination of academic learning and practical experiences will allow me to grow and contribute significantly in the field of technology.</p>
+        </section>
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <div class="carousel">
+                <div class="carousel-item active">
+                    <p id="normalp" class="cardp" >Currently studying higher education in Systems Analysis and Developmen</h3>
+                </div>
+                <div class="carousel-item">
+                    <ul id="knowledge">
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+                <div class="carousel-item">
+                    <p id="normalp" class="cardp">In addition to the higher education curriculum, I have intermediate English as well as having done independent projects and added external knowledge from other teachers and students around the world.</p>
+                </div>
+                <button class="carousel-button prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="carousel-button next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </section>  
+    </div>
+    <section id="projects" class="section">
+        <h2>My projects</h2>
+        <div class="projects-grid">
+            <div class="project-item">
+                <a href="https://github.com/gabrielmnt/Space-invaders"><h3>Space invaders</h3>
+                <img src="images/Space INvaders.png" alt="Projeto 1">
+            </a>
+            <p id="project_p">Python</p>
+            </div>
+            <div class="project-item">
+                <a href="https://gabrielmnt.github.io/tic-tac-toe/"><h3>tic tac toe</h3>
+                <img src="images/tic_tac_toe.png" alt="Projeto 2">
+            </a>
+            <p id="project_p">HTML | CSSS | JavaScript</p>
+            </div>
+            <div class="project-item">
+                <a href="https://github.com/gabrielmnt/snake-game"><h3>snake</h3>
+                <img src="images/snake_redondo.png" alt="Projeto 3">
+            </a>
+            <p id="project_p">Python</p>
+            </div>
+            <div class="project-item">
+                <a href="https://gabrielmnt.github.io/calculator/"><h3>Calculator</h3>
+                <img src="images/calcbg.png" alt="Projeto 4">
+            </a>
+            <p id="project_p">HTML | CSSS | JavaScript</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Gabriel Monteiro</p>
+    </footer>
+</body>
+</html>

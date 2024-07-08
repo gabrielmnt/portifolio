@@ -1,0 +1,269 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    
+}
+
+#normalp{
+    font-weight: 600;
+}
+
+header {
+    background-color: black ;
+    color: white;
+    padding: 3px 0;
+
+}
+
+header ul li{
+    background-color: wheat;
+    padding: 5px;
+    border-radius: 10px;
+    opacity: 1;
+    transition: opacity 1s ease 0s;
+}
+
+header ul li:hover{
+    opacity: 0.51;
+} 
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.section {
+    padding: 15px 20px  10px;
+    text-align: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Background semi-transparente para melhor legibilidade */
+    margin: 20px; /* Adiciona margem de 40px */
+    flex: 1;
+}
+
+.side-by-side {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+
+#about h2{
+    margin-bottom: 15px ;
+    font-size: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#home {
+    background-color: black;
+    font-family:'Times New Roman', Times, serif;
+    margin: 0 0 3em 0;
+    opacity: 100%;
+}
+
+#home h1{
+    font-size: 2.5em;
+    color: wheat;
+    
+}
+
+#about, #education {
+    background-color: rgb(255, 246, 228);
+    border-radius: 30px;
+    color: black;
+    -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.8);
+}
+
+#education h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+}
+
+#education #normalp {
+    padding: 10% 5em;
+}
+
+.education-item {
+    margin: 20px 0;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.cardp{
+    padding: 0 2em;
+    text-align: center;
+}
+
+#knowledge{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+#knowledge li{
+    margin-top: 2em;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background-color: rgb(216, 196, 159, .5);
+    color: black;
+    border: none;
+    padding: 25px 10px;
+    cursor: pointer;
+    border-radius: 1em;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
+.project-item a img{
+    opacity: 1;
+    transition: opacity 1s easeIn 0s;
+}
+
+.project-item a img:hover{
+    opacity: 0.6;
+}
+
+#projects{
+    background: black;
+    color: wheat;
+}
+
+#projects h2{
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;   
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 5em;
+    padding-bottom: 40px;  
+    
+}
+
+.projects-grid img{
+    -webkit-box-shadow: inset 0px 0px 6px 7px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 6px 7px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 6px 7px rgba(0,0,0,0.75);
+}
+
+.project-item {
+    width: calc(25% - 100px);
+    text-align: center;
+    
+}
+
+.project-item a:visited{
+    color: white;
+}
+
+
+.project-item a:link{
+    color: white;
+    opacity: 100%;
+    text-decoration: none;
+    transition: opacity 1s ease 0s;
+    color: white;
+}
+
+.project-item a:link:hover{
+    opacity: 60%;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.project-item h3 {
+    margin: 10px 0;
+}
+
+
+@media (max-width: 768px) {
+    .project-item {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .project-item {
+        width: calc(100% - 40px);
+    }
+}
+
+footer {
+    opacity: 50%;
+    color: white;
+    text-align: center;
+    padding: 1px 0;
+    position:static;
+    width: 100%;
+    bottom: 0;
+    }
+
+footer p{
+    opacity: 60%;
+    color: wheat;
+    transition: opacity 1s ease 0s;
+}
+
+footer p:hover{
+    opacity: 100%;
+}
