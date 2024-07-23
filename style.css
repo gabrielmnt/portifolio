@@ -241,6 +241,11 @@ nav ul li a {
 
     nav ul li {
         margin: 10px 0;
+        text-align: center;
+    }
+
+     nav ul li a {
+        display: block;
     }
 
     .project-item {
